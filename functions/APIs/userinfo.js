@@ -1,9 +1,8 @@
 const { db } = require('../util/admin');
 
-exports.getAllTodos = (request, response) => {
+exports.getUserInfo = (request, response) => {
 	db
 		.collection('userinfo')
-		.orderBy('date', 'desc')
 		.get()
 		.then((data) => {
 			let userInfo = [];
